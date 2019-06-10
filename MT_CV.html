@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<!--
+    
+    Nosey little bugger aren't you!
+
+    A Huge thank you to Cassidy Williams, http://cassidoo.co/, this website was created in an afternoon as a distraction to my dissertation and Cassidy's website was a great resource to tear-apart.
+    Even during this short afternoon I gained a great deal of additional knowledge and CSS tricks.
+
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Matt Trowbridge</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700" rel="stylesheet">
+
+    <style>
+        a {
+            color: #E9BC3F;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-weight: 400;
+            margin: 0;
+        }
+
+        h2 {
+            color: #696A6F;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        h3::before {
+            content: 'public void ';
+            font-weight: 200;
+            color: #696A6F;
+            font-size: 0.8em;
+        }
+
+        h3::after {
+            content: ' {';
+            font-weight: 200;
+            color: #696A6F;
+            font-size: 0.8em;
+        }
+
+        body {
+            background: #24252D;
+            color: #CACACC;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8em;
+            display: flex;
+            justify-content: center;
+        }
+
+        header {
+            margin-bottom: 1em;
+        }
+
+        nav a, footer a {
+            color: #CACACC;
+            margin: auto 1em auto 0;
+            text-decoration: underline
+        }
+
+            nav a:hover {
+                font-weight: bold;
+            }
+
+        .container {
+            width: 650px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+            ul li {
+                display: flex;
+                margin-bottom: 1em;
+            }
+
+            ul::after, #character::after {
+                content: '}';
+                font-weight: 200;
+                color: #696A6F;
+                font-size: 0.8em;
+            }
+
+        .date {
+            color: #696A6F;
+            font-weight: 300;
+            min-width: 200px;
+        }
+
+            .date::before {
+                content: '';
+                display: inline-block;
+                width: .7em;
+                height: .7em;
+                border-radius: 100%;
+                margin: 0 2em 0 0;
+            }
+
+        .desc_comment {
+            color:greenyellow;
+        }
+
+            .desc_comment::before {
+                content: '//TODO: ';
+            }
+
+        .job .date::before {
+            background: #24D05A;
+        }
+
+        .job a {
+            color: #24D05A;
+        }
+
+        .event .date::before {
+            background: #EB4888;
+        }
+
+        .event a {
+            color: #EB4888;
+        }
+
+        .milestone .date::before {
+            background: #10A2F5;
+        }
+
+        .milestone a {
+            color: #10A2F5;
+        }
+
+        .quote {
+            display: block;
+            background: #2f313b;
+            line-height: 1.8em;
+            margin: 0 0 2em 0;
+            padding: 0.8em 1.5em 1.5em;
+        }
+
+            .quote p {
+                color: gray;
+                font-weight: 300;
+                margin: 0;
+            }
+
+        h4 {
+            font-size: 1.1em;
+            margin: 0.5em 0 0 0;
+        }
+
+            h4::after {
+                content: ' says';
+                font-weight: 200;
+                color: #696A6F;
+                font-size: 0.8em;
+            }
+
+        footer {
+            margin: 1em;
+            font-weight: 200;
+            color: #696A6F;
+            font-size: 0.8em;
+        }
+
+            footer a {
+                float: right;
+            }
+    </style>
+
+
+</head>
+<body id="top">
+    <div class="container">
+        <header>
+            <h1>Matt Trowbridge</h1>
+            <h2>Systems Software Developer, IOM</h2>
+        </header>
+
+        <nav id="nav">
+            <a href="http://linkedin.trowbridge.im/" target="_blank">linkedin</a>
+            <a href="http://facebook.trowbridge.im/" target="_blank">facebook</a>
+            <a href="http://djmatt.trowbridge.im/" target="_blank">dj matt</a>
+            <a href="mailto:matt@trowbridge.im" title="matt@trowbridge.im">email</a>
+            <a href="tel:+447624376740" title="07624 376740">tel</a>
+        </nav>
+
+        <div id="intro">
+            <p>
+                Hi, I'm Matt, a Computer Science Graduate from <a href="https://www1.chester.ac.uk/study/undergraduate/computer-science/201809" target="_blank">Chester University</a>.</p>
+            <p>I currently work as a Systems Software Developer for the <a href="https://www.iompost.com/" target="_blank">Isle of Man Post Office.</a></p>
+            <p>I am also the <a href="https://www.facebook.com/pg/theoutbackiom/" target="_blank">Resident DJ</a> for The Outback.</p>
+        </div>
+
+        <div id="changelog">
+            <h3>Changelog()</h3>
+            <ul>
+				<li class="event">
+                    <div class="date">Coming soon..</div>
+                    <div class="desc_comment">Try to take over the world...</div>
+                </li>
+				<li class="job">
+                    <div class="date">Sept 2018</div>
+                    <div class="desc">Joined <a href="https://www.iompost.com/" target="_blank">IOMPOST</a> as a Systems Software Developer</div>
+                </li>
+                <li class="milestone">
+                    <div class="date">June 2018</div>
+                    <div class="desc">Completed <a href="https://www.ucm.ac.im/" target="_blank">Computer Science Degree</a></div>
+                </li>
+                <li class="job">
+                    <div class="date">June 2017</div>
+                    <div class="desc">Temporary Full-Time with <a href="https://www.oldmutualinternational.com/" target="_blank">OMI</a> as a VB Developer</div>
+                </li>
+                <li class="event">
+                    <div class="date">January 2017</div>
+                    <div class="desc">Treated myself to a <a href="http://toy.trowbridge.im/" target="_blank">new toy</a></div>
+                </li>
+                <li class="job">
+                    <div class="date">October 2016</div>
+                    <div class="desc">Joined <a href="https://www.mtg.im/" target="_blank">Manx Technology Group</a></div>
+                </li>
+                <li class="job">
+                    <div class="date">October 2016</div>
+                    <div class="desc">Left <a href="https://www.tescoplc.com/" target="_blank">Tesco</a></div>
+                </li>
+                <li class="job">
+                    <div class="date">June 2016</div>
+                    <div class="desc">Temporary Full-time with <a href="https://www.barclays.co.uk/" target="_blank">Barclays</a></div>
+                </li>
+                <li class="event">
+                    <div class="date">March 2016</div>
+                    <div class="desc">Joined <a href="https://www.facebook.com/pg/theoutbackiom/" target="_blank">The Outback</a> as Resident DJ</div>
+                </li>
+                <li class="milestone">
+                    <div class="date">September 2015</div>
+                    <div class="desc">Started <a href="https://www.ucm.ac.im/">Computer Science Degree</a></div>
+                </li>
+                <li class="event">
+                    <div class="date">Sometime 2014</div>
+                    <div class="desc">Started a self-taught hobby <a href="#">DJing</a></div>
+                </li>
+                <li class="milestone">
+                    <div class="date">June 2013</div>
+                    <div class="desc">Finished <a href="https://www.ucm.ac.im/" target="_blank">Level 3 Extended BTEC, IT</a></div>
+                </li>
+                <li class="job">
+                    <div class="date">November 2011</div>
+                    <div class="desc">Joined <a href="https://www.tescoplc.com/" target="_blank">Tesco</a></div>
+                </li>
+                <li class="milestone">
+                    <div class="date">September 2011</div>
+                    <div class="desc">Started <a href="https://www.ucm.ac.im/" target="_blank">Level 3 Extended BTEC, IT</a></div>
+                </li>
+            </ul>
+        </div>
+        <div id="character">
+            <h3>Character()</h3>
+            <div class="quote">
+                <h4>Dr Phillip Newton</h4>
+                <p>I have taught Matt programming at UCM for 4 years - his final year at level 3 and on all 3 years of his degree studies. Matt is a keen programmer who always provides excellent results in his programming assignments. He has been quick to learn the several programming languages he has been taught and has applied them very well in all contexts.</p>
+                <br />
+                <p>Matt is hard working, smart and very innovative. This has been evident especially in his dissertation project where despite many unexpected difficulties (some due to upgrades in supplied programming libraries) Matt has kept focussed on the task in hand and through grit and determination has found solutions to the difficulties.</p>
+                <br />
+                <p>Along with Matt’s natural talent for programming he is also  honest, reliable, respectful, confident and friendly with a likable personality; he gets on well with staff and other students and has been a pleasure to teach.</p>
+                <br />
+                <p>I have no doubt that Matt  is an excellent choice for any Developer role.</p>
+            </div>
+            <div class="quote">
+                <h4>Matt's Dad</h4>
+                <p>I'm not giving you a stupid quote to put on your website</p>
+            </div>
+            <div class="quote">
+                <h4>Dr Alastair W. Robertson</h4>
+                <p>I have known Matt Trowbridge for 6 years as his lecturer at UCM.  Matt has developed into a solid computer science professional who works well under pressure and is never afraid to ask the difficult questions.  He has a natural passion for computer science and always presses on to achieve high awards.  This psychology would naturally reflect in his work ethic in any domain, whether educational or in the workplace context.</p>
+                <br />
+                <p>Matt is well organised and has gained full respect among the peers he works with and those that have lectured to him over the years.</p>
+            </div>
+        </div>
+
+        
+
+        <footer>
+            <a href="#top">top</a>
+            <p>Version 0.0.1.1 - Last updated: 10/06/19</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>
